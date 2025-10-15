@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>User Management</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>User Management App</h1>
+
+    <form id="user-form">
+      <input type="hidden" id="user-id" />
+      <div class="row">
+        <input id="name" placeholder="Name" required />
+        <input id="email" placeholder="Email" type="email" required />
+        <input id="age" placeholder="Age" type="number" min="0" />
+      </div>
+      <div>
+        <textarea id="bio" placeholder="Short bio"></textarea>
+      </div>
+      <div class="actions">
+        <button id="submit-btn" type="submit">Add User</button>
+        <button id="cancel-btn" type="button" style="display:none">Cancel</button>
+      </div>
+    </form>
+
+    <hr />
+
+    <h2>All Users (<span id="count">0</span>)</h2>
+    <div id="user-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
